@@ -1,0 +1,54 @@
+﻿<!doctype html> 
+<html>
+<head>
+
+  <title>Ped Data Counts</title>
+
+  <!--
+  Loading Handsontable (full distribution that includes all dependencies apart from jQuery)
+  -->
+
+  
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/jquery.handsontable.full.js"></script>
+      <link href="Scripts/jquery.handsontable.full.css" rel="stylesheet" />
+
+
+
+     
+
+  
+</head>
+
+<body>
+
+
+    
+
+    <div id="example1"></div>
+
+    <script>
+        $(document).ready(function () {
+            var data = [
+              ["8:00AM", 20, 10, 20, 10, 0, 0],
+              ["8:15AM", 30, 20, 30, 20, 0, 0],
+              ["8:30AM", 20, 10, 20, 10, 0, 0]
+            ];
+
+            $('#example1').handsontable({
+                data: data,
+                minRows: 5,
+                minCols: 6,
+                minSpareRows: 1,
+                autoWrapRow: true,
+                colHeaders: true,
+                colHeaders: ["Time", "Ped N-S", "Ped S-N", "Ped E-W", "Ped W-E", "Wheelchair", "Child"],
+                contextMenu: false
+            });
+
+            //$('.ver').text($('#example').data('handsontable').version);
+        });
+    </script>
+   
+</body>
+</html>

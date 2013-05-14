@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>Bike Data Counts</title>
+
+  <!--
+  Loading Handsontable (full distribution that includes all dependencies apart from jQuery)
+  -->
+
+  
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/jquery.handsontable.full.js"></script>
+      <link href="Scripts/jquery.handsontable.full.css" rel="stylesheet" />
+
+
+
+     
+
+  
+</head>
+
+<body>
+
+
+    
+
+    <div id="example"></div>
+
+    <script>
+        $(document).ready(function () {
+            var data = [
+              ["8:00AM", 20, 10, 20, 10, 0, 0, 1, 2, 3, 4, 5],
+              ["8:15AM", 30, 20, 30, 20, 0, 0, 1, 2, 3, 4, 5],
+              ["8:30AM", 20, 10, 20, 10, 0, 0, 1, 2, 3, 4, 5]
+            ];
+
+            $('#example').handsontable({
+                data: data,
+                minRows: 5,
+                minCols: 6,
+                minSpareRows: 1,
+                autoWrapRow: true,
+                colHeaders: true,
+                colHeaders: ["Time", "Bike N-S", "Bike S-N", "Bike E-W", "Bike W-E", "Female", "Sidewalk", "Wrong-Way Riding", "No Helmet", "Child Bike", "Other", "Other"],
+                contextMenu: false
+            });
+
+            //$('.ver').text($('#example').data('handsontable').version);
+        });
+    </script>
+   
+</body>
+</html>

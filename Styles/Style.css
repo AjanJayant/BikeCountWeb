@@ -1,0 +1,346 @@
+﻿/* ----------------------------------------------------------------------- *|
+		Basic HTML
+|* ----------------------------------------------------------------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, form {
+    height : 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wizard {
+     height: 100%;
+     width: 100%;
+     padding: 0;
+     margin: 0;
+}
+
+p {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+hr
+{
+    padding: 0;
+}
+
+h1, h2, h3 
+{
+    text-align: center;
+}
+
+.centerElement{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+/* ----------------------------------------------------------------------- *|
+		Miscellaneous
+|* ----------------------------------------------------------------------- */
+
+.frame_button 
+{
+    padding: 7px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    width: 110px;
+}
+
+.other_button
+{
+    padding: 3px;
+    background-color: white;
+    border: 2px solid #777777;
+    color: black; 
+}
+
+.other_button:hover
+{
+    background-color: #999999;
+}
+
+.grayed_out
+{
+    color: #777;
+}
+
+.clear {
+    clear: both;
+}
+
+hr .smallDivider {
+    width: 900px;
+}
+
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopup {
+    border: 3px solid #777777;
+    background-color: white;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+/* ----------------------------------------------------------------------- *|
+		Form Elements
+|* ----------------------------------------------------------------------- */
+
+#overviewImage {
+    display: block;
+    margin: auto;
+}
+
+.questionTwoOne, .questionTwoTwo, .questionTwoThree, .questionThree, .questionFour, .questionFiveOne, .questionFiveTwo {
+    display: inline-block;
+    float: left;    
+}
+
+.questionTwoOne {
+    width: 55px;
+}
+
+.questionTwoTwo {
+    width: 65px;
+    padding-left: 45px;
+}
+
+.questionTwoThree {
+    width: 35px;
+    padding-left: 45px;
+}
+
+.questionThree {
+    width: 415px;
+}
+
+.questionFour {
+    width: 345px;
+}
+
+.questionFiveOne, .questionFiveTwo {
+    width: 200px;
+}
+
+.questionFiveTwo {
+    padding-left: 70px;
+}
+
+.formTwoOne, .formTwoTwo {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.formTwoThree, .formThree, .formFour, .formFiveOne, .formFiveTwo {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.formTwoOne, .formTwoTwo {
+    float: left;
+}
+
+.formFiveOne {
+    float: left;
+}
+
+.centerDivTwo {
+    width: 850px;
+}
+
+.centerDivThree {
+    width: 693px;    
+}
+
+.centerDivFourOne {
+    width: 595px;
+}
+
+.centerDivFourTwo {
+    width: 650px;
+}
+
+.centerDivFive {
+    width: 860px;
+}
+
+select, .textbox {
+    margin-bottom: 9px;
+}
+
+.otherVarOne {
+    margin-top: 2px;
+}
+
+.otherVarTwo {
+    margin-top: 16px;
+}
+
+#intervalLocation {
+    width: 900px;
+    text-align: right;
+}
+
+#suggestedFormat {
+    width: 550px;
+    float: left;
+    padding-left: 30px;
+}
+
+#left_side
+{
+    float: left;
+    margin: 20px 0 10px 400px;
+}
+
+#right_side
+{
+    float: right;
+    margin: 20px 400px 10px 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.automated
+{
+    display: none;
+}
+
+#unusual
+{
+    font-size: small;
+}
+
+/* ----------------------------------------------------------------------- *|
+		Google Maps
+|* ----------------------------------------------------------------------- */
+
+#infoPanel {
+    width: 785px;
+}
+
+#searchBox
+{
+    text-align: center;
+}
+
+#searchTextField
+{
+    width: 300px;
+}
+
+#markerStatus, #address
+{
+    font-style: italic;
+}
+
+#address
+{
+    margin-top: 0;
+}
+
+#address
+{
+    width: 500px;
+}
+
+#intersection
+{
+    display: none;
+}
+
+#cancel
+{
+    margin-left: 10px;
+}
+
+#submit
+{
+    float: right;
+    margin-right: 10px;   
+}
+
+#add_new_location
+{
+    position: absolute; 
+    top: 350px; 
+    right: 22px;
+}
+
+/* ----------------------------------------------------------------------- *|
+		Login
+|* ----------------------------------------------------------------------- */
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+input.textEntry 
+{
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+.loginLabel {
+    display: inline-block;
+    width: 80px;
+}
+
+#accountInfo {
+    width: 500px;
+}
+
+.loginContent {
+    width: 215px;
+}
+
+#loginButton {
+    float: right;
+}

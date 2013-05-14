@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%--<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>--%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Bike Data Clearinghouse</title>
+    <meta name="description" content="This project seeks to compile, organize, make accessible, and create a data standard for bicycle count data collected in Los Angeles County. " />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="Styles/Site.css" type="text/css" />
+    
+    <script type="text/javascript" src="Scripts/master.js"></script>
+    <%--<script type="text/javascript" src="Scripts/GoogleMapAPI.js"></script>--%>
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body <%--onload="setHeight();--%>">
+    <form runat="server">
+    <div id="page">
+        <div id="header">
+            <div id="topBar">
+                <div style="display:inline-block" class="left">
+                    <asp:HyperLink runat="server" CssClass="logo" NavigateUrl="http://www.scag.ca.gov/" ImageUrl="Images/SCAG_whitetext_logo.png" ToolTip="SCAG logo" Target="_blank" />
+                    <asp:HyperLink runat="server" CssClass="logo" NavigateUrl="http://www.metro.net/" ImageUrl="Images/metro_logo.png" ToolTip="Metro logo" Target="_blank" />
+                    <asp:HyperLink runat="server" CssClass="SiteTitle" NavigateUrl="Default.aspx" ToolTip="Bike Data Clearinghouse link" Text="Bike Data Clearinghouse" />
+                </div>
+                <div id="loginDisplay">
+                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                        <AnonymousTemplate>
+                            [ <a href="Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Welcome <span class="italic"><asp:LoginName ID="HeadLoginName" runat="server" /></span>! &nbsp; &nbsp;
+                            [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="nav">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="nav_button" EnableViewState="False" Orientation="Horizontal" SkipLinkText="">
+                <staticmenuitemstyle HorizontalPadding="20" ForeColor="white" Font-Bold="false"/>
+                    <Items>
+                        <asp:MenuItem NavigateUrl="Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="Map.aspx" Text="View Count Data"/>
+                        <asp:MenuItem NavigateUrl="Add_Data2.aspx" Text="Add/Edit Dataset" />
+                        <asp:MenuItem NavigateUrl="Download_Data.aspx" Text="Download Data" />
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <!--Necessary for ASP.NET Ajax script libraries (AjaxToolkit) to work-->
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="clear"></div>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="mainContent" runat="server"/>
+        </div>
+        <div class="clear"></div>
+    </div>
+    </form>
+</body>
+</html>

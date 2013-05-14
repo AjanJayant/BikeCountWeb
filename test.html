@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+ 
+  <title>Handsontable - jQuery grid editor. Excel-like grid editing with HTML &amp; JavaScript</title>
+
+  <!--
+  Loading Handsontable (full distribution that includes all dependencies apart from jQuery)
+  -->
+<!--  <script src="lib/jquery.js"></script>
+  <script src="dist/jquery.handsontable.full.js"></script>
+  <link rel="stylesheet" media="screen" href="dist/jquery.handsontable.full.css">-->
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <link href="Scripts/jquery.handsontable.full.css" rel="stylesheet" />
+    <script src="Scripts/jquery.handsontable.full.js"></script>
+</head>
+
+<body>
+
+
+    <div id="example"></div>
+
+    <script>
+        $(document).ready(function () {
+            var data = [
+              ["", "Maserati", "Mazda", "Mercedes", "Mini", "Mitsubishi"],
+              ["2009", 0, 2941, 4303, 354, 5814],
+              ["2010", 5, 2905, 2867, 412, 5284],
+              ["2011", 4, 2517, 4822, 552, 6127],
+              ["2012", 2, 2422, 5399, 776, 4151]
+            ];
+
+            $('#example').handsontable({
+                data: data,
+                minRows: 5,
+                minCols: 6,
+                minSpareRows: 1,
+                autoWrapRow: true,
+                colHeaders: true,
+                contextMenu: true
+            });
+
+
+        });
+    </script>
+
+   
+
+
+
+
+
+
+
+
+</body>
+</html>
